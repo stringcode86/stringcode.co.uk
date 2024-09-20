@@ -1,0 +1,34 @@
+.Logo {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    color: white;
+}
+
+.WebGLCircle {
+    position:absolute;
+    z-index:0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.Logo-content-wrapper {
+    container-type: size;
+    z-index: 1000;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.Logo-title {
+    font-size: min(8cqw, 8cqh);
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    text-transform: uppercase;
+}
