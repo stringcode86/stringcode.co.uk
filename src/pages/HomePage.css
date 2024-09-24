@@ -1,0 +1,6 @@
+.HomePage .Logo {
+    position: relative;
+    margin: 0 auto;
+    width: 100vw;
+    min-height: 100vh;
+}

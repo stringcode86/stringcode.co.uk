@@ -1,6 +1,5 @@
 import './Logo.css';
-import WebGLCircle from "./WebGLCircle";
-import {useEffect, useState, useRef} from "react";
+import WebGLCircle from "./WebGLCircle.jsx";
 import WebGLSupport from "../utils/WebGLDetector";
 
 
