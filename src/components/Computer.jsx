@@ -93,6 +93,11 @@ function Computer() {
             w = refContainer.current.getBoundingClientRect().width
             h = refContainer.current.getBoundingClientRect().height
             camera.aspect = w / h
+            if (w < 686 && w >= 400) {
+                let s = w / 686
+                scene.scale.set(s, s, s)
+            }
+            console.log(w)
             camera.updateProjectionMatrix()
             renderer.setSize(w, h)
             renderer.domElement.width = w
