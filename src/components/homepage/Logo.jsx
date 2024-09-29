@@ -1,16 +1,14 @@
 import './Logo.css';
 import WebGLCircle from "./WebGLCircle.jsx";
-import WebGLSupport from "../utils/WebGLDetector";
+import WebGLSupport from "../../utils/WebGLDetector.js";
 
 
-const Logo = ({
-  title = "stringCode"
-}) => {
+const Logo = ({title = "stringCode", style}) => {
 
     const webGLStatus = WebGLSupport()
 
     return (
-        <div className="Logo">
+        <div className="Logo" style={style}>
             {webGLStatus === 1 ? (<WebGLCircle/>) : null}
             <div className={'Logo-content-wrapper'}>
                 <h1 className={'Logo-title'}>{title}</h1>

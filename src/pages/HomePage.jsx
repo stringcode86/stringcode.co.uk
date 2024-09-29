@@ -1,11 +1,15 @@
-import './HomePage.css'
-import Logo from "../components/Logo.jsx";
+import Logo from "../components/homepage/Logo.jsx";
 
 
 const HomePage = () => {
+    const homePageStyle = {
+        color: "white",
+        background: "black"
+    }
+
     return (
-        <div className={'HomePage'}>
-            <Logo/>
+        <div className={'HomePage'} style={homePageStyle}>
+            <Logo style={{width: '100vw', height: '100vh'}}/>
         </div>
     )
 }

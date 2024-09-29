@@ -1,7 +1,7 @@
 import './WebGLCircle.css'
 import * as THREE from 'three'
-import fragmentShader from '../assets/shaders/fragment.glsl?raw'
-import vertexShader from '../assets/shaders/vertex.glsl?raw'
+import fragmentShader from '../../assets/shaders/fragment.glsl?raw'
+import vertexShader from '../../assets/shaders/vertex.glsl?raw'
 import { useEffect, useRef } from "react"
 
 

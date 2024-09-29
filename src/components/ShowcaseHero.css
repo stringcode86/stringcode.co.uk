@@ -1,0 +1,60 @@
+.ShowcaseHero {
+    display: flex;
+    height: 100vh;
+    align-items: stretch;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.ShowcaseHeroItemsWrapper {
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: calc(100cqw - 2em);
+    max-width: 1400px;
+    flex: 2;
+    gap: 2em;
+}
+
+.ShowcaseHeroButtonsContainer {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 2em;
+    padding: 2em;
+}
+
+.ShowcaseHeroComputerContainer {
+    width: 55%;
+    margin: 0 auto;
+    /*background-color: red;*/
+}
+
+.ShowcaseHeroComputerContainer .Computer {
+    /*background-color: orange;*/
+    /*margin-top: 6cqh;*/
+    margin: 0 auto;
+    /*background-color: blue;*/
+    /*width: 100%;*/
+    height: calc(100% - 10cqh);
+    margin-top: 10cqh;
+}
+
+.ShowcaseHeroTitle {
+    background-color: #24F29C;
+    color: #212429;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 16cqw;
+    text-align: center;
+    flex-shrink: 1;
+}
+
+@media only screen and (min-width : 1200px)  {
+    .ShowcaseHeroTitle {
+        font-size: 192px;
+    }
+}
