@@ -14,7 +14,7 @@ import {useEffect, useRef} from "react";
 import modelUrl from '../assets/models/old_pc_low_poly_game_model.glb'
 import Theme from "../theme/Theme.js";
 
-function Computer() {
+function ComputerMessy() {
 
     const edgeColor = Theme.colors.primary
     const meshColor = Theme.colors.backgroundMesh
@@ -24,24 +24,23 @@ function Computer() {
 
     useEffect(() => {
         const scene = new THREE.Scene()
-        let w = 10
-        let h = 10
+        let w, h = 10
         const camera = new THREE.PerspectiveCamera(75, w / h, 0.1, 1000)
         const renderer = new THREE.WebGLRenderer(
             {antialias: true, alpha: true, powerPreference: "high-performance"}
         )
+        renderer.setClearColor(bgColor, bgAlpha)
+        renderer.setSize(w, h)
+        renderer.setAnimationLoop(animate)
 
         if (refContainer.current && refContainer.current.children.length === 0) {
             refContainer.current.appendChild(renderer.domElement)
             w = refContainer.current.getBoundingClientRect().width
             h = refContainer.current.getBoundingClientRect().height
-
-            renderer.setClearColor(bgColor, bgAlpha)
             renderer.setSize(w, h)
-            renderer.setAnimationLoop(animate)
         }
 
-        // const controls = new OrbitControls(camera, renderer.domElement)
+        const controls = new OrbitControls(camera, renderer.domElement)
         camera.position.set(72, 40, 100)
         camera.rotation.set(-0.38, 0.58, 0.21)
 
@@ -56,6 +55,7 @@ function Computer() {
         const path = modelUrl
         loader.load(path, function (object) {
             const meshes = []
+
             object.scene.traverse(function (child) {
                 if (child.isMesh) {
                     meshes.push(child)
@@ -112,10 +112,17 @@ function Computer() {
         window.addEventListener('scroll', onWindowScroll, false)
 
         function animate() {
+            // requestAnimationFrame(animate)
+            // controls.update()
             render()
+            // stats.update()
+            // TODO: Only update when camera changed
+            // console.log(camera.position, camera.rotation)
         }
+
         function render() {
-            composer.render()
+            composer.render();
+            // renderer.render(scene, camera)
         }
         onWindowResize()
         animate()
@@ -123,11 +130,11 @@ function Computer() {
 
     return (
         <div
-            className="Computer"
+            className="ComputerMessy"
             ref={refContainer}
             style={{ minWidth: '100px', minHeight: '100px'}}
         ></div>
     )
 }
 
-export default Computer
+export default ComputerMessy
