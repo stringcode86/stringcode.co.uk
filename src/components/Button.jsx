@@ -10,6 +10,7 @@ const StyledButton = styled.button`
     padding: 1em 1em;
     margin: 0px 0.8em 0.8em 0px;
     width: 100%;
+    transition: 0.1s;
 `
 
 const StyledButtonWrapper = styled.div`
