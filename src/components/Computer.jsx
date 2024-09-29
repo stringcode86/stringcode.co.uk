@@ -55,6 +55,7 @@ function Computer() {
         const path = modelUrl
         loader.load(path, function (object) {
             const meshes = []
+
             object.scene.traverse(function (child) {
                 if (child.isMesh) {
                     meshes.push(child)
@@ -98,7 +99,17 @@ function Computer() {
             render()
         }
 
+        function onWindowScroll() {
+            const y = window.scrollY
+            const h = refContainer.current.getBoundingClientRect().height
+            const ratio = y / h
+            if (ratio <= 1) {
+                scene.rotation.y = ratio
+            }
+        }
+
         window.addEventListener('resize', onWindowResize, false)
+        window.addEventListener('scroll', onWindowScroll, false)
 
         function animate() {
             // requestAnimationFrame(animate)
@@ -106,7 +117,7 @@ function Computer() {
             render()
             // stats.update()
             // TODO: Only update when camera changed
-            console.log(camera.position, camera.rotation)
+            // console.log(camera.position, camera.rotation)
         }
 
         function render() {
