@@ -3,7 +3,6 @@
     height: 100vh;
     align-items: stretch;
     flex-direction: column;
-    overflow: hidden;
 }
 
 .ShowcaseHeroItemsWrapper {
@@ -30,15 +29,10 @@
 .ShowcaseHeroComputerContainer {
     width: 55%;
     margin: 0 auto;
-    /*background-color: red;*/
 }
 
 .ShowcaseHeroComputerContainer .Computer {
-    /*background-color: orange;*/
-    /*margin-top: 6cqh;*/
     margin: 0 auto;
-    /*background-color: blue;*/
-    /*width: 100%;*/
     height: calc(100% - 10cqh);
     margin-top: 10cqh;
 }
@@ -48,13 +42,21 @@
     color: #212429;
     text-transform: uppercase;
     font-weight: 900;
-    font-size: 16cqw;
+    font-size: 25cqw;
+    line-height: 25cqw;
     text-align: center;
     flex-shrink: 1;
 }
 
-@media only screen and (min-width : 1200px)  {
+@media only screen and (min-width : 1260px)  {
     .ShowcaseHeroTitle {
-        font-size: 192px;
+        line-height: 24cqw;
+    }
+}
+
+@media only screen and (min-width : 1500px)  {
+    .ShowcaseHeroTitle {
+        font-size: 380px;
+        line-height: 360px;
     }
 }

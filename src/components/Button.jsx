@@ -5,12 +5,13 @@ const StyledButton = styled.button`
     color: ${Theme.colors.primary};
     border: 2px solid ${Theme.colors.primary};
     font-weight: 600;
-    font-size: 1.5em;
+    font-size: 2em;
     box-shadow: 0.8em 0.8em ${Theme.colors.primary};
     padding: 1em 1em;
     margin: 0px 0.8em 0.8em 0px;
     width: 100%;
     transition: 0.1s;
+    text-transform: uppercase;
 `
 
 const StyledButtonWrapper = styled.div`

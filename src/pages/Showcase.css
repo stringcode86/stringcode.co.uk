@@ -1,5 +1,10 @@
 .Showcase {
     background-color: #212429;
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+    line-height: 1.25em;
 }
 
 .BackgroundGradient {
