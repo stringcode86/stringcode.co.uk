@@ -11,10 +11,7 @@ const ShowcaseHero = ({
     moreHandler,
 }) => {
 
-    const debug = () => {
-        console.log('Button clicked! 2')
-        codeReviewHandler()
-    }
+
 
     return (
         <section className="ShowcaseHero">
@@ -31,10 +28,10 @@ const ShowcaseHero = ({
             </div>
             <div className="ShowcaseHeroFooterWrapper">
                 <h1>
-                    <div className='blink'>{'>'}</div>{'showcase'}
+                    <div className='blink'>{'>'}</div>
+                    {'showcase'}
                 </h1>
             </div>
-
         </section>
     )
 }

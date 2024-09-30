@@ -1,8 +1,8 @@
 .ShowcaseHero {
     display: flex;
-    height: 100vh;
-    align-items: stretch;
+    justify-content: space-between;
     flex-direction: column;
+    min-height: 100vh;
     overflow: hidden;
 }
 
@@ -13,6 +13,7 @@
     justify-content: space-between;
     max-width: 1400px;
     flex: 2;
+    flex-shrink: 0;
     width: calc(100cqw - 6em);
     margin-top: 3em;
     margin-bottom: 3em;
@@ -41,10 +42,20 @@
     aspect-ratio: 0.9;
     position: absolute;
     overflow: visible !important;
+    /*max-height: 400px;*/
+    /*height: min(65cqh, 90cqw);*/
     top: 50%;
     transform: translateY(-50%);
     right: -20%;
     left: 3em;
+    /*background-color: green;*/
+}
+
+@media (min-aspect-ratio: 1/1) and (max-height: 900px) {
+    .ShowcaseHeroComputerContainer .Computer {
+        right: -10%;
+        aspect-ratio: 1.25;
+    }
 }
 
 .ShowcaseHeroComputerContainer .Computer canvas {
@@ -57,6 +68,9 @@
         justify-content: stretch;
         align-items: stretch;
         gap: 3em;
+        width: calc(100cqw - 3em);
+        font-size: 0.75em;
+        line-height: 1em;
     }
 
     .ShowcaseHeroButtonsContainer {
@@ -74,18 +88,21 @@
         position: absolute;
         right: -20%;
         left: -20%;
+        aspect-ratio: 0.9;
+        /*background-color: red;*/
     }
 }
 
 .ShowcaseHeroFooterWrapper {
     background-color: #24F29C;
     color: #212429;
-    flex-shrink: 1;
+    flex-shrink: 2 !important;
     display: flex;
     justify-content: center;
 }
 
 .ShowcaseHeroFooterWrapper h1 {
+    margin: 0 auto;
     text-transform: uppercase;
     font-weight: 900;
     font-size: 20cqw;
@@ -122,3 +139,5 @@
         letter-spacing: 2.1cqw;
     }
 }
+
+@media only screen and (max-height : 820px)  {}

@@ -1,10 +1,12 @@
 .SimpleSection {
-    margin: 1.5em 1.5em;
+    margin: 0 auto;
     color: white;
     font-size: 2em;
     line-height: 1.5em;
     min-height: 100vh;
-    /*background-color: red;*/
+    max-width: 1400px;
+    padding: 1.5em 1.5em;
+    overflow: hidden;
 }
 
 .SimpleSection h1 {

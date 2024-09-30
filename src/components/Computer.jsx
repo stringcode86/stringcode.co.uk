@@ -112,7 +112,7 @@ function Computer() {
             const y = window.scrollY
             const h = refContainer.current.getBoundingClientRect().height
             const ratio = y / h
-            if (ratio <= 2) {
+            if (ratio <= 3) {
                 scene.rotation.y = ratio
             }
         }

@@ -17,9 +17,7 @@ const Showcase = () => {
     `
 
     const scrollToId = (id) =>  {
-        console.log('id:', id)
         const element = document.getElementById(id)
-        console.log(element)
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' })
         }

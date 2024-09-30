@@ -12,6 +12,7 @@ const StyledButton = styled.button`
     width: 100%;
     transition: 0.1s;
     text-transform: uppercase;
+    background-color: transparent;
 `
 
 const StyledButtonWrapper = styled.div`
