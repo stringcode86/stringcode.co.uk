@@ -20,7 +20,7 @@ const ShowcaseHero = () => {
                     <Computer/>
                 </div>
             </div>
-            <h1 className='ShowcaseHeroTitle'>{'>showcase'}</h1>
+            <h1 className='ShowcaseHeroTitle'><div className='blink ShowcaseHeroTitle'>{'>'}</div>{'showcase'}</h1>
         </section>
     )
 }

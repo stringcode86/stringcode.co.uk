@@ -10,10 +10,11 @@
     display: flex;
     align-items: stretch;
     justify-content: space-between;
-    width: calc(100cqw - 2em);
     max-width: 1400px;
     flex: 2;
-    gap: 2em;
+    width: calc(100cqw - 4em);
+    gap: 0em;
+    background-color: orange;
 }
 
 .ShowcaseHeroButtonsContainer {
@@ -24,17 +25,26 @@
     flex-grow: 1;
     gap: 2em;
     padding: 2em;
+    width: 40%;
 }
 
 .ShowcaseHeroComputerContainer {
-    width: 55%;
+    width: 60%;
     margin: 0 auto;
+    /*background-color: blue;*/
+    position: relative;
+    overflow: visible !important;
 }
 
 .ShowcaseHeroComputerContainer .Computer {
-    margin: 0 auto;
-    height: calc(100% - 10cqh);
-    margin-top: 10cqh;
+    aspect-ratio: 0.9;
+    position: absolute;
+    overflow: visible !important;
+    /*background-color: red;*/
+    top: 50%;
+    transform: translateY(-50%);
+    right: -20%;
+    left: 5%;
 }
 
 .ShowcaseHeroTitle {
@@ -42,12 +52,25 @@
     color: #212429;
     text-transform: uppercase;
     font-weight: 900;
-    font-size: 21cqw;
+    font-size: 20cqw;
+    line-height: 18cqw !important;
     letter-spacing: 0.1em;
     text-align: center;
     flex-shrink: 1;
-    line-height: 21cqw !important;
 }
+
+.blink {
+    animation: blinker 2.75s linear infinite;
+    display: inline-block;
+}
+
+@keyframes blinker {
+    45% { opacity: 1;}
+    50% { opacity: 0;}
+    55% { opacity: 1;}
+}
+
+
 
 /*@media only screen and (min-width : 1260px)  {*/
 /*    .ShowcaseHeroTitle {*/
@@ -55,10 +78,10 @@
 /*    }*/
 /*}*/
 
-@media only screen and (min-width : 1280px)  {
+@media only screen and (min-width : 1281px)  {
     .ShowcaseHeroTitle {
         font-size: 268.8px;
-        line-height: 268.8px !important;
+        line-height: 230.4px !important;
         letter-spacing: 2.1cqw;
     }
 }

@@ -13,6 +13,7 @@ import {OutputPass} from 'three/addons/postprocessing/OutputPass.js'
 import {useEffect, useRef} from "react";
 import modelUrl from '../assets/models/old_pc_low_poly_game_model.glb'
 import Theme from "../theme/Theme.js";
+import './Computer.css'
 
 function Computer() {
 
@@ -24,8 +25,8 @@ function Computer() {
 
     useEffect(() => {
         const scene = new THREE.Scene()
-        let w = 10
-        let h = 10
+        let w = 100
+        let h = 100
         const camera = new THREE.PerspectiveCamera(75, w / h, 0.1, 1000)
         const renderer = new THREE.WebGLRenderer(
             {antialias: true, alpha: true, powerPreference: "high-performance"}
@@ -41,9 +42,9 @@ function Computer() {
             renderer.setAnimationLoop(animate)
         }
 
-        // const controls = new OrbitControls(camera, renderer.domElement)
-        camera.position.set(72, 40, 100)
-        camera.rotation.set(-0.38, 0.58, 0.21)
+        const controls = new OrbitControls(camera, renderer.domElement)
+        camera.position.set(62, 34, 86)
+        camera.rotation.set(-0.38, 0.59, 0.21)
 
         const edgeMaterial = new LineMaterial({color: edgeColor, linewidth: 5})
         const meshMaterial = new THREE.MeshBasicMaterial({
@@ -93,14 +94,18 @@ function Computer() {
             w = refContainer.current.getBoundingClientRect().width
             h = refContainer.current.getBoundingClientRect().height
             camera.aspect = w / h
-            if (w < 686 && w >= 400) {
-                let s = w / 686
-                scene.scale.set(s, s, s)
-            }
             console.log(w)
             camera.updateProjectionMatrix()
             renderer.setSize(w, h)
             renderer.domElement.width = w
+            renderer.domElement.height = h
+            // if (w < 686 && w >= 400) {
+            //     let s = w / 686
+            //     scene.scale.set(s, s, s)
+            // }
+            scene.position.set(0, -12)
+            // let s = 1.2
+            // scene.scale.set(s, s, s)
             render()
         }
 
@@ -118,6 +123,7 @@ function Computer() {
 
         function animate() {
             render()
+            // console.log(camera.position, camera.rotation)
         }
         function render() {
             composer.render()

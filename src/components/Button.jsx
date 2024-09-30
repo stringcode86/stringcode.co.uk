@@ -6,9 +6,9 @@ const StyledButton = styled.button`
     border: 2px solid ${Theme.colors.primary};
     font-weight: 600;
     font-size: 2em;
-    box-shadow: 0.8em 0.8em ${Theme.colors.primary};
+    box-shadow: 0.7em 0.7em ${Theme.colors.primary};
     padding: 1em 1em;
-    margin: 0px 0.8em 0.8em 0px;
+    margin: 0px 0.7em 0.7em 0px;
     width: 100%;
     transition: 0.1s;
     text-transform: uppercase;
@@ -18,7 +18,7 @@ const StyledButtonWrapper = styled.div`
     &:hover {
         ${StyledButton} {
             box-shadow: 0.2em 0.2em ${Theme.colors.primary};
-            margin: 0.6em 0.2em 0.2em 0.6em;
+            margin: 0.5em 0.2em 0.2em 0.5em;
         }
     }
 `
