@@ -20,7 +20,12 @@ const ShowcaseHero = () => {
                     <Computer/>
                 </div>
             </div>
-            <h1 className='ShowcaseHeroTitle'><div className='blink ShowcaseHeroTitle'>{'>'}</div>{'showcase'}</h1>
+            <div className="ShowcaseHeroFooterWrapper">
+                <h1>
+                    <div className='blink'>{'>'}</div>{'showcase'}
+                </h1>
+            </div>
+
         </section>
     )
 }

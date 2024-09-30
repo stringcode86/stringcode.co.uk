@@ -3,6 +3,7 @@
     height: 100vh;
     align-items: stretch;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .ShowcaseHeroItemsWrapper {
@@ -12,9 +13,10 @@
     justify-content: space-between;
     max-width: 1400px;
     flex: 2;
-    width: calc(100cqw - 4em);
+    width: calc(100cqw - 6em);
+    margin-top: 3em;
+    margin-bottom: 3em;
     gap: 0em;
-    background-color: orange;
 }
 
 .ShowcaseHeroButtonsContainer {
@@ -24,14 +26,12 @@
     flex-direction: column;
     flex-grow: 1;
     gap: 2em;
-    padding: 2em;
-    width: 40%;
+    width: 38%;
 }
 
 .ShowcaseHeroComputerContainer {
-    width: 60%;
+    width: 62%;
     margin: 0 auto;
-    /*background-color: blue;*/
     position: relative;
     overflow: visible !important;
 }
@@ -40,23 +40,61 @@
     aspect-ratio: 0.9;
     position: absolute;
     overflow: visible !important;
-    /*background-color: red;*/
     top: 50%;
     transform: translateY(-50%);
     right: -20%;
-    left: 5%;
+    left: 3em;
 }
 
-.ShowcaseHeroTitle {
+.ShowcaseHeroComputerContainer .Computer canvas {
+    overflow: visible !important;
+}
+
+@media only screen and (max-width : 768px) {
+    .ShowcaseHeroItemsWrapper {
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: stretch;
+        gap: 3em;
+    }
+
+    .ShowcaseHeroButtonsContainer {
+        flex-shrink: 2;
+        flex-grow: 0;
+        margin-right: 1.5em;
+        width: auto;
+    }
+
+    .ShowcaseHeroComputerContainer {
+        width: 50%;
+        flex-grow: 4;
+    }
+    .ShowcaseHeroComputerContainer .Computer {
+        position: absolute;
+        right: -20%;
+        left: -20%;
+    }
+}
+
+.ShowcaseHeroFooterWrapper {
     background-color: #24F29C;
     color: #212429;
+    flex-shrink: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.ShowcaseHeroFooterWrapper h1 {
     text-transform: uppercase;
     font-weight: 900;
     font-size: 20cqw;
     line-height: 18cqw !important;
-    letter-spacing: 0.1em;
-    text-align: center;
-    flex-shrink: 1;
+    letter-spacing: 0.13em;
+}
+
+.ShowcaseHeroFooterWrapper h1>:first-child {
+    display: inline-block;
+    margin-left: 2.5cqw;
 }
 
 .blink {
@@ -70,17 +108,15 @@
     55% { opacity: 1;}
 }
 
-
-
-/*@media only screen and (min-width : 1260px)  {*/
-/*    .ShowcaseHeroTitle {*/
-/*        line-height: 24cqw;*/
-/*    }*/
-/*}*/
+@media only screen and (max-width : 720px)  {
+    .ShowcaseHeroFooterWrapper h1 {
+        font-size: 19cqw;
+    }
+}
 
 @media only screen and (min-width : 1281px)  {
-    .ShowcaseHeroTitle {
-        font-size: 268.8px;
+    .ShowcaseHeroFooterWrapper h1 {
+        font-size: 256px;
         line-height: 230.4px !important;
         letter-spacing: 2.1cqw;
     }

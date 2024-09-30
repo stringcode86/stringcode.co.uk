@@ -13,7 +13,7 @@ import {OutputPass} from 'three/addons/postprocessing/OutputPass.js'
 import {useEffect, useRef} from "react";
 import modelUrl from '../assets/models/old_pc_low_poly_game_model.glb'
 import Theme from "../theme/Theme.js";
-import './Computer.css'
+
 
 function Computer() {
 
@@ -42,7 +42,7 @@ function Computer() {
             renderer.setAnimationLoop(animate)
         }
 
-        const controls = new OrbitControls(camera, renderer.domElement)
+        // const controls = new OrbitControls(camera, renderer.domElement)
         camera.position.set(62, 34, 86)
         camera.rotation.set(-0.38, 0.59, 0.21)
 
@@ -103,7 +103,7 @@ function Computer() {
             //     let s = w / 686
             //     scene.scale.set(s, s, s)
             // }
-            scene.position.set(0, -12)
+            scene.position.set(0, -10)
             // let s = 1.2
             // scene.scale.set(s, s, s)
             render()
@@ -113,7 +113,7 @@ function Computer() {
             const y = window.scrollY
             const h = refContainer.current.getBoundingClientRect().height
             const ratio = y / h
-            if (ratio <= 1) {
+            if (ratio <= 2) {
                 scene.rotation.y = ratio
             }
         }
