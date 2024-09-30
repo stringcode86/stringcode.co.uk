@@ -1,0 +1,13 @@
+.SimpleSection {
+    margin: 1.5em 1.5em;
+    color: white;
+    font-size: 2em;
+    line-height: 1.5em;
+    min-height: 100vh;
+    /*background-color: red;*/
+}
+
+.SimpleSection h1 {
+    font-size: 4em;
+    line-height: 2em;
+}

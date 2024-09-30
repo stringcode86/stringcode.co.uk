@@ -4,17 +4,26 @@ import { useRef } from 'react';
 import Button from "./Button.jsx";
 
 
+const ShowcaseHero = ({
+    codeReviewHandler,
+    uiuxHandler,
+    cryptoCredHandler,
+    moreHandler,
+}) => {
 
-const ShowcaseHero = () => {
+    const debug = () => {
+        console.log('Button clicked! 2')
+        codeReviewHandler()
+    }
 
     return (
         <section className="ShowcaseHero">
             <div className="ShowcaseHeroItemsWrapper">
                 <div className="ShowcaseHeroButtonsContainer">
-                    <Button style={{width: '100%'}}>Review Code</Button>
-                    <Button>UI/UX showcase</Button>
-                    <Button>Crypto cred</Button>
-                    <Button>More</Button>
+                    <Button onClick={codeReviewHandler}>Review Code</Button>
+                    <Button onClick={uiuxHandler}>UI/UX showcase</Button>
+                    <Button onClick={cryptoCredHandler}>Crypto cred</Button>
+                    <Button onClick={moreHandler}>More</Button>
                 </div>
                 <div className="ShowcaseHeroComputerContainer">
                     <Computer/>
