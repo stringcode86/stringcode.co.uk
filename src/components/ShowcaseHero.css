@@ -42,21 +42,23 @@
     color: #212429;
     text-transform: uppercase;
     font-weight: 900;
-    font-size: 25cqw;
-    line-height: 25cqw;
+    font-size: 21cqw;
+    letter-spacing: 0.1em;
     text-align: center;
     flex-shrink: 1;
+    line-height: 21cqw !important;
 }
 
-@media only screen and (min-width : 1260px)  {
-    .ShowcaseHeroTitle {
-        line-height: 24cqw;
-    }
-}
+/*@media only screen and (min-width : 1260px)  {*/
+/*    .ShowcaseHeroTitle {*/
+/*        line-height: 24cqw;*/
+/*    }*/
+/*}*/
 
-@media only screen and (min-width : 1500px)  {
+@media only screen and (min-width : 1280px)  {
     .ShowcaseHeroTitle {
-        font-size: 380px;
-        line-height: 360px;
+        font-size: 268.8px;
+        line-height: 268.8px !important;
+        letter-spacing: 2.1cqw;
     }
 }
