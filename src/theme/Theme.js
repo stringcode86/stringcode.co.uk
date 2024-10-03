@@ -7,7 +7,7 @@ export const Colors = {
 
 export const ThemeColors = {
     primary: Colors.green,
-    primaryLowAlpha: Colors.gray10,
+    primaryLowAlpha: Colors.green10,
     background: Colors.gray10,
     backgroundMesh: Colors.gray1
 }

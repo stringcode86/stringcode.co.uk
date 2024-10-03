@@ -15,7 +15,13 @@ body {
 
 }
 
-/*@viewport {*/
-/*    width: device-width !important;*/
-/*    height: device-height !important;*/
-/*}*/
+@keyframes blinker {
+    45% { opacity: 1;}
+    50% { opacity: 0;}
+    55% { opacity: 1;}
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #24F29C;
+}

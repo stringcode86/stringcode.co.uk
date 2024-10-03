@@ -1,8 +1,23 @@
 import './Showcase.css'
-import Computer from "../components/Computer.jsx";
 import { useRef } from 'react';
 import ShowcaseHero from "../components/ShowcaseHero.jsx";
-import SimpleSection from "../components/SimpleSection.jsx";
+import ReviewCode from "../components/ReviewCode.jsx";
+import BackgroundGradient from "../components/BGGradient.jsx";
+import Section from "../components/Section.jsx";
+import { UIUXShowcase, UIUXShowcaseMultiItem } from "../components/UIUXShowcase.jsx";
+
+import videoUrl00 from '../assets/videos/00 photo box.mov'
+import videoUrl01 from '../assets/videos/01 ClearScore.mp4'
+import videoUrl02 from '../assets/videos/memory game.mp4'
+import videoUrl03 from '../assets/videos/paralax.mp4'
+import videoUrl04 from '../assets/videos/04.mp4'
+
+const SimpleSection  = ({id, title, body}) => {
+    return <Section id={id}>
+        <h1>{title}</h1>
+        <div>{body}</div>
+    </Section>
+}
 
 
 const Showcase = () => {
@@ -14,6 +29,13 @@ const Showcase = () => {
     const sectionBody = `
         This site is currently being worked on as you read it.
         Please check back by the end of the day. Thank you !
+        
+        This site is currently being worked on as you read it.
+        Please check back by the end of the day. Thank you !
+    `
+
+    const uiuxShowcaseBody00 = `
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     `
 
     const scrollToId = (id) =>  {
@@ -25,15 +47,38 @@ const Showcase = () => {
 
     return (
         <div className="Showcase">
-            <div className="BackgroundGradient"></div>
+            <BackgroundGradient/>
             <ShowcaseHero
                 codeReviewHandler={() => scrollToId('review')}
                 uiuxHandler={() => scrollToId('uiux')}
                 cryptoCredHandler={() => scrollToId('crypto')}
                 moreHandler={() => scrollToId('more')}
             />
-            <SimpleSection id="review" title='Code review' body={sectionBody}/>
-            <SimpleSection id="uiux" title='UI/UX showcase' body={sectionBody}/>
+            <ReviewCode id="review"/>
+            <UIUXShowcase
+                title={'UX/UX SHOWCASE I'}
+                body={uiuxShowcaseBody00}
+                videoUrl={videoUrl00}
+                id="uiux"
+            />
+            <UIUXShowcase
+                title={'UX/UX SHOWCASE II'}
+                body={uiuxShowcaseBody00}
+                videoUrl={videoUrl01}
+            />
+            <UIUXShowcaseMultiItem
+                title={'UX/UX SHOWCASE III'}
+                bodies={[
+                    "Some short description of the content above",
+                    "Some short description of the content above",
+                    "Some short description of the content above",
+                ]}
+                videoUrls={[
+                    videoUrl02,
+                    videoUrl03,
+                    videoUrl04,
+                ]}
+            />
             <SimpleSection id="crypto" title='Crypto cred' body={sectionBody}/>
             <SimpleSection id="more" title='More' body={sectionBody}/>
         </div>

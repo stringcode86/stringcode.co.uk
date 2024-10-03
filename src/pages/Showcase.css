@@ -3,21 +3,29 @@
     font-family: "VT323", monospace;
     font-weight: 400;
     font-style: normal;
-    font-size: 1em;
-    line-height: 1.25em;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    letter-spacing: 0.5px;
 }
 
-.BackgroundGradient {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    pointer-events: none;
-    width: 200vw;
-    height: 200vh;
-    background: radial-gradient(50% 50% at 50% 50%, #24F29C10 0%, rgba(255, 255, 255, 0) 100%);
-    transform: translate(-50vw, -100vh);
-    z-index: 0;
+.Showcase h1 {
+    font-size: 2em;
+    line-height: 1em;
+    letter-spacing: 0px;
+}
+
+.Showcase h2 {
+    font-size: 1.5em;
+    line-height: 1.35em;
+    letter-spacing: 0px;
+    font-weight: SemiBold;
+}
+
+.Showcase h3 {
+    font-size: 1em;
+    line-height: 1.5em;
+    letter-spacing: 0.5px;
+    font-weight: bold;
 }
 
 section {
