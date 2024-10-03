@@ -15,7 +15,7 @@ import modelUrl from '../assets/models/old_pc_low_poly_game_model.glb'
 import Theme from "../theme/Theme.js";
 
 
-function Computer() {
+const Computer = () => {
 
     const edgeColor = Theme.colors.primary
     const meshColor = Theme.colors.backgroundMesh

@@ -12,10 +12,23 @@ import videoUrl02 from '../assets/videos/memory game.mp4'
 import videoUrl03 from '../assets/videos/paralax.mp4'
 import videoUrl04 from '../assets/videos/04.mp4'
 
-const SimpleSection  = ({id, title, body}) => {
+import cryptoModelUrl from '../assets/models/eth2.glb'
+import moreModelUrl from '../assets/models/floppy_disk.glb'
+
+import Scene3D from "../components/Scene3D.jsx";
+
+const SimpleSection  = ({id, title, body, scene3DProps}) => {
     return <Section id={id}>
         <h1>{title}</h1>
         <div>{body}</div>
+        <Scene3D
+            url={scene3DProps.url}
+            position={scene3DProps.position}
+            rotation={scene3DProps.rotation}
+            animRotateY={scene3DProps.animRotateY}
+            edgesThreshold={scene3DProps.edgesThreshold}
+            style={{width: "600px", height: "600px"}}
+        />
     </Section>
 }
 
@@ -79,8 +92,35 @@ const Showcase = () => {
                     videoUrl04,
                 ]}
             />
-            <SimpleSection id="crypto" title='Crypto cred' body={sectionBody}/>
-            <SimpleSection id="more" title='More' body={sectionBody}/>
+            <SimpleSection
+                id="crypto"
+                title='Crypto cred'
+                body={sectionBody}
+                scene3DProps={
+                    {
+                        url: cryptoModelUrl,
+                        position: {x: -1.68, y: 136, z: 651 },
+                        rotation: {x: -0.19, y: 0, z:0 },
+                        animRotateY: 0.005,
+                        edgesThreshold: 10,
+                    }
+                }
+                modelUrl={cryptoModelUrl}
+            />
+            <SimpleSection
+                id="more"
+                title='More'
+                body={sectionBody}
+                scene3DProps={
+                    {
+                        url: moreModelUrl,
+                        position: {x: -0.03, y: 0.24, z: 2.43 },
+                        rotation: {x: -0.1, y: -0.01, z: -0.0 },
+                        animRotateY: 0.01,
+                        edgesThreshold: 45,
+                    }
+                }
+            />
         </div>
     )
 }
