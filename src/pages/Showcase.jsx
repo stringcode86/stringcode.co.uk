@@ -1,10 +1,10 @@
 import './Showcase.css'
 import { useRef } from 'react';
+import BackgroundGradient from "../components/BGGradient.jsx";
 import ShowcaseHero from "../components/ShowcaseHero.jsx";
 import ReviewCode from "../components/ReviewCode.jsx";
-import BackgroundGradient from "../components/BGGradient.jsx";
-import Section from "../components/Section.jsx";
 import { UIUXShowcase, UIUXShowcaseMultiItem } from "../components/UIUXShowcase.jsx";
+import Section3DScene from "../components/Section3DScene.jsx";
 
 import videoUrl00 from '../assets/videos/00 photo box.mov'
 import videoUrl01 from '../assets/videos/01 ClearScore.mp4'
@@ -15,29 +15,8 @@ import videoUrl04 from '../assets/videos/04.mp4'
 import cryptoModelUrl from '../assets/models/eth2.glb'
 import moreModelUrl from '../assets/models/floppy_disk.glb'
 
-import Scene3D from "../components/Scene3D.jsx";
-
-const SimpleSection  = ({id, title, body, scene3DProps}) => {
-    return <Section id={id}>
-        <h1>{title}</h1>
-        <div>{body}</div>
-        <Scene3D
-            url={scene3DProps.url}
-            position={scene3DProps.position}
-            rotation={scene3DProps.rotation}
-            animRotateY={scene3DProps.animRotateY}
-            edgesThreshold={scene3DProps.edgesThreshold}
-            style={{width: "600px", height: "600px"}}
-        />
-    </Section>
-}
-
 
 const Showcase = () => {
-    const refReview = useRef()
-    const refUIUX = useRef()
-    const refCrypto = useRef()
-    const refMore = useRef()
 
     const sectionBody = `
         This site is currently being worked on as you read it.
@@ -92,35 +71,42 @@ const Showcase = () => {
                     videoUrl04,
                 ]}
             />
-            <SimpleSection
+            <Section3DScene
                 id="crypto"
                 title='Crypto cred'
-                body={sectionBody}
+                body={uiuxShowcaseBody00}
                 scene3DProps={
                     {
                         url: cryptoModelUrl,
-                        position: {x: -1.68, y: 136, z: 651 },
-                        rotation: {x: -0.19, y: 0, z:0 },
+                        position: {x: -1.68, y: 136, z: 651},
+                        rotation: {x: -0.19, y: 0, z: 0},
                         animRotateY: 0.005,
                         edgesThreshold: 10,
                     }
                 }
                 modelUrl={cryptoModelUrl}
-            />
-            <SimpleSection
+            >
+                <p>{uiuxShowcaseBody00}</p>
+                <p>{uiuxShowcaseBody00}</p>
+                <p>{uiuxShowcaseBody00}</p>
+            </Section3DScene>
+            <Section3DScene
                 id="more"
                 title='More'
-                body={sectionBody}
+                body={uiuxShowcaseBody00}
                 scene3DProps={
                     {
                         url: moreModelUrl,
-                        position: {x: -0.03, y: 0.24, z: 2.43 },
-                        rotation: {x: -0.1, y: -0.01, z: -0.0 },
+                        position: {x: -0.03, y: 0.24, z: 2.43},
+                        rotation: {x: -0.1, y: -0.01, z: -0.0},
                         animRotateY: 0.01,
                         edgesThreshold: 45,
                     }
                 }
-            />
+            >
+                <p>{uiuxShowcaseBody00}</p>
+                <p>{uiuxShowcaseBody00}</p>
+            </Section3DScene>
         </div>
     )
 }

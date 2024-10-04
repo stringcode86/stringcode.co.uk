@@ -31,3 +31,8 @@
 section {
     display: block
 }
+
+p {
+    margin-top: 1.5em !important;
+    /*background-color: red;*/
+}

@@ -107,7 +107,7 @@ const Scene3D = (props) => {
         <div
             className="Scene3D"
             ref={refContainer}
-            style={{ width: '600px', height: '600px', border: "1px solid white" }}
+            style={props.style}
         ></div>
     )
 }
