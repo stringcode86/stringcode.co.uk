@@ -88,7 +88,7 @@ const Scene3D = (props) => {
 
         function animate() {
             if (props.animRotateY !== 0) {
-                scene.rotation.y += 0.01
+                scene.rotation.y += -props.animRotateY
             }
             render()
         }

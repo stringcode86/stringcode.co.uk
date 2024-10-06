@@ -7,7 +7,7 @@ const Section3DSceneWrapper = styled.div`
     overflow: visible;
     display: flex;
     gap: 2em;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: row-reverse;
 `
 
@@ -23,8 +23,9 @@ const Scene3DWrapper = styled.div`
     //background-color: red;
     > * {
         position: absolute;
-        top: -5%;
-        bottom: -20%;
+        aspect-ratio: 1 !important;
+        top: -12.5%;
+        bottom: -12.5%;
         left: -12.5%;
         right: -12.5%;
         overflow: visible;
