@@ -98,7 +98,7 @@ const Scene3D = (props) => {
             } else if (props.animRotateY !== 0) {
                 scene.rotation.y += -props.animRotateY
             } else if (x === undefined ) {
-                scene.rotation.y = window.scrollY / window.innerHeight + 1.0
+                scene.rotation.y = window.scrollY / window.innerHeight - 0.5
             } else {
                 scene.rotation.x = (y - window.scrollY) / window.innerHeight - 0.5
                 scene.rotation.y = x / window.innerWidth - 0.5

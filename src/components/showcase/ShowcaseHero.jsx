@@ -138,30 +138,30 @@ const FooterWrapper = styled.div`
     justify-content: center;
     
     > h1 {
-        margin: 0 auto;
-        text-transform: uppercase;
-        font-weight: 900;
-        font-size: 20cqw;
+        margin: 0 auto !important;
+        text-transform: uppercase !important;
+        font-weight: 900 !important;
+        font-size: 20cqw !important;
         line-height: 18cqw !important;
-        letter-spacing: 0.13em;
+        letter-spacing: 0.13em !important;
     }
     
     > h1 >:first-child {
-        display: inline-block;
-        margin-left: 2.5cqw;
-    }
-
-    @media only screen and (max-width:720px) {
-        > h1 {
-            font-size: 19cqw;
-        }
+        display: inline-block !important;
+        margin-left: 2.5cqw !important;
     }
 
     @media only screen and (min-width : 1281px) {
         > h1 {
-            font-size: 256px;
+            font-size: 256px !important;
             line-height: 230.4px !important;
-            letter-spacing: 2.1cqw;
+            letter-spacing: 2.1cqw !important;
+        }
+    }
+    
+    @media only screen and (max-width:720px) {
+        > h1 {
+            font-size: 19cqw !important;
         }
     }
 `

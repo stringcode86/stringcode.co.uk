@@ -1,6 +1,6 @@
-import './Showcase.css'
-import {useRef} from 'react';
+import styled from 'styled-components'
 import BackgroundGradient from "../components/showcase/BGGradient.jsx";
+import {useRef} from 'react';
 import ShowcaseHero from "../components/showcase/ShowcaseHero.jsx";
 import ReviewCode from "../components/showcase/ReviewCode.jsx";
 import {UIUXShowcase, UIUXShowcaseMultiItem} from "../components/showcase/UIUXShowcase.jsx";
@@ -15,6 +15,40 @@ import cryptoModelUrl from '../assets/models/eth2.glb'
 import moreModelUrl from '../assets/models/floppy_disk.glb'
 
 
+const ShowcaseWrapper = styled.div`
+    background-color: #212429;
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    letter-spacing: 0.5px;
+
+    h1 {
+        font-size: 2em;
+        line-height: 1em;
+        letter-spacing: 0px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        line-height: 1.35em;
+        letter-spacing: 0px;
+        font-weight: SemiBold;
+    }
+
+    h3 {
+        font-size: 1em;
+        line-height: 1.5em;
+        letter-spacing: 0.5px;
+        font-weight: bold;
+    }
+
+    p {
+        margin-top: 1.5em !important;
+    }
+`
+
 const Showcase = () => {
 
     const scrollToId = (id) => {
@@ -24,7 +58,7 @@ const Showcase = () => {
         }
     }
 
-    return (<div className="Showcase">
+    return <ShowcaseWrapper>
         <BackgroundGradient/>
         <ShowcaseHero
             codeReviewHandler={() => scrollToId('review')}
@@ -108,7 +142,7 @@ const Showcase = () => {
             }
             videoUrls={[videoUrl02, videoUrl03,]}
         >
-            <p><h1>Why fluff matters?!</h1></p>
+            <p><h1>Why "fluff" matters?!</h1></p>
             <p>
                 {
                     `
@@ -232,7 +266,7 @@ const Showcase = () => {
                 }
             </p>
         </Section3DScene>
-    </div>)
+    </ShowcaseWrapper>
 }
 
 export default Showcase
