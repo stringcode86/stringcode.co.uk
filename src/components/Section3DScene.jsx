@@ -9,18 +9,17 @@ const Section3DSceneWrapper = styled.div`
     gap: 2em;
     align-items: center;
     flex-direction: row-reverse;
+
+    @media only screen and (max-width : 1023px) {
+        flex-direction: column-reverse;
+    }
 `
 
 const Scene3DWrapper = styled.div`
-    //float: right;
-    //margin-bottom: 1em;
-    //width: 30%;
-    
     position: relative;
     min-width: 30%;
     aspect-ratio: 1 !important;
     overflow: visible;
-    //background-color: red;
     > * {
         position: absolute;
         aspect-ratio: 1 !important;
@@ -29,7 +28,11 @@ const Scene3DWrapper = styled.div`
         left: -12.5%;
         right: -12.5%;
         overflow: visible;
-        //background-color: #00FF00AA;
+    }
+
+    @media only screen and (max-width : 1023px) {
+        width: 100%;
+        max-width: 400px;
     }
 `
 

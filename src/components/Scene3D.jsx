@@ -17,6 +17,7 @@ const Scene3D = (props) => {
 
     useEffect(() => {
         let w, h = 100
+        let x, y = 0
 
         const scene = new THREE.Scene()
         const camera = new THREE.PerspectiveCamera(75, w / h, 0.1, 1000)
@@ -86,9 +87,19 @@ const Scene3D = (props) => {
             render()
         }
 
+        function onMouseMove(event) {
+            x = event.pageX
+            y = event.pageY
+        }
+
         function animate() {
             if (props.animRotateY !== 0) {
                 scene.rotation.y += -props.animRotateY
+            } else if (x === undefined ) {
+                scene.rotation.y = window.scrollY / window.innerHeight + 1.0
+            } else {
+                scene.rotation.x = (y - window.scrollY) / window.innerHeight - 0.5
+                scene.rotation.y = x / window.innerWidth - 0.5
             }
             render()
         }
@@ -98,6 +109,7 @@ const Scene3D = (props) => {
             composer.render()
         }
 
+        window.addEventListener("mousemove", onMouseMove, false)
         window.addEventListener('resize', onWindowResize, false)
         onWindowResize()
         animate()

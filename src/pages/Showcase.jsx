@@ -18,18 +18,6 @@ import moreModelUrl from '../assets/models/floppy_disk.glb'
 
 const Showcase = () => {
 
-    const sectionBody = `
-        This site is currently being worked on as you read it.
-        Please check back by the end of the day. Thank you !
-        
-        This site is currently being worked on as you read it.
-        Please check back by the end of the day. Thank you !
-    `
-
-    const uiuxShowcaseBody00 = `
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    `
-
     const scrollToId = (id) => {
         const element = document.getElementById(id)
         if (element) {
@@ -48,20 +36,107 @@ const Showcase = () => {
         <ReviewCode id="review"/>
         <UIUXShowcase
             title={'UX/UX SHOWCASE I'}
-            body={uiuxShowcaseBody00}
             videoUrl={videoUrl00}
             id="uiux"
-        />
+        >
+            <p>
+                {
+                    `
+                        Show case of a flow that let you pick photos from photo gallery and print
+                        a box of photos. Sheet let's you pick the photos. Subtle check mark animations. 
+                        Photos fly in from behind the sheet. And are stacked in the box with correct orientation
+                        and fluid animation. They also drop behind the sheet.
+                    `
+                }
+            </p>
+            <p>
+                {
+                    `
+                        Sheet is dismissed via smooth transition into presentation view. Everything is super 
+                        fluid and natural. You can swipe photos away. Scrolling all the way to the top closes 
+                        the box. Again in very intuitive way.
+                    `
+                }
+            </p>
+        </UIUXShowcase>
         <UIUXShowcase
             title={'UX/UX SHOWCASE II'}
-            body={uiuxShowcaseBody00}
             videoUrl={videoUrl01}
-        />
+        >
+            <p>
+                {
+                    `
+                        Show case of financial health app. Think head space for personal finance. Notice 
+                        upon launch every single element has a subtle animations. There is bounciness and 
+                        delightful polish the interactions. Flow represents your financial health and blooms 
+                        as it improves.
+                    `
+                }
+            </p>
+            <p>
+                {
+                    `
+                        When swiping from one tab to another. Cells are stacked. Transitions are interactive. 
+                        Tapping on total score ring breaks it down into individual sub-scores. It looks very 
+                        simple and natural. Implementing it however, it very much is not (simple). To get the 
+                        ring transitions to visually make sense for all the possible states took a full day 
+                        of work.
+                    `
+                }
+            </p>
+            <p>
+                {
+                    `
+                        There is a hand coded custom and container with transitions that mimics Apple’s App 
+                        Store transitions.
+                    `
+                }
+            </p>
+        </UIUXShowcase>
         <UIUXShowcaseMultiItem
             title={'UX/UX SHOWCASE III'}
-            bodies={["Some short description of the content above", "Some short description of the content above", "Some short description of the content above",]}
-            videoUrls={[videoUrl02, videoUrl03, videoUrl04,]}
-        />
+            bodies={
+                [
+                    `
+                        Simple memory game. What’s cool about it does not contain any bitmap assets. Everything is 
+                        drawn in code. Apple Watch version of the app was featured the App Store for a year. 
+                    `,
+                    `
+                        Onboarding flow for calendar complication app. Everything is drawn and animated in code 
+                        (by hand).
+                    `,
+                ]
+            }
+            videoUrls={[videoUrl02, videoUrl03,]}
+        >
+            <p><h1>Why fluff matters?!</h1></p>
+            <p>
+                {
+                    `
+                        I am hoping to demonstrate with examples above that I am a fan of highly polished, 
+                        fluid interactive interfaces. I am a believer they matter for two reasons:
+                    `
+                }
+            </p>
+            <p>
+                {
+                    `
+                        1) They drive KPI improvements. At one start up I worked for, we swapped buttons for 
+                        slider with animated "pixar like" face on it. Slider was bouncing at the 
+                        beginning, nudging user to slide it across. Face was smiling more as slider moved, 
+                        hearts appeared etc. This nearly doubled spent per user.
+                    `
+                }
+            </p>
+            <p>
+                {
+                    `
+                        2) If you are going to do something, why not make it spectacular !
+                    `
+                }
+            </p>
+
+        </UIUXShowcaseMultiItem>
         <Section3DScene
             id="crypto"
             title='> Crypto cred'
@@ -69,7 +144,7 @@ const Showcase = () => {
                 url: cryptoModelUrl,
                 position: {x: -1.68, y: 136, z: 651},
                 rotation: {x: -0.19, y: 0, z: 0},
-                animRotateY: 0.005,
+                animRotateY: 0, //0.01,
                 edgesThreshold: 10,
             }}
             modelUrl={cryptoModelUrl}
@@ -101,10 +176,11 @@ const Showcase = () => {
                 {
                     `
                         I have contributed to number of crypto open source projects. Monero GUI, Farcaster 
-                        python client, Ethers, Geth, MetaMask, Rainbow wallet, Uniswap and more. I am both 
-                        cypherpunk and degen at heart. 
+                        python client and others. I am both cypherpunk and degen at heart. 
                     `
+                    // Ethers, Geth, MetaMask, Rainbow wallet, Uniswap and more.
                 }
+
             </p>
         </Section3DScene>
         <Section3DScene
@@ -114,7 +190,7 @@ const Showcase = () => {
                 url: moreModelUrl,
                 position: {x: -0.03, y: 0.24, z: 2.43},
                 rotation: {x: -0.1, y: -0.01, z: -0.0},
-                animRotateY: 0.005,
+                animRotateY: 0, //0.005,
                 edgesThreshold: 20,
             }}
         >
@@ -159,4 +235,5 @@ const Showcase = () => {
         </Section3DScene>
     </div>)
 }
+
 export default Showcase
