@@ -1,11 +1,18 @@
-import './WebGLCircle.css'
+import styled from 'styled-components'
 import * as THREE from 'three'
 import fragmentShader from '../../assets/shaders/fragment.glsl?raw'
 import vertexShader from '../../assets/shaders/vertex.glsl?raw'
 import { useEffect, useRef } from "react"
 
+const WebGLCircleWrapper = styled.div`
+    > canvas {
+        width:100%;
+        height: 100%;
+        background-color: #000;
+    } 
+`
 
-function WebGLCircle() {
+const WebGLCircle = ({style}) => {
 
     const refContainer = useRef(null)
 
@@ -103,9 +110,7 @@ function WebGLCircle() {
 
     }, [])
 
-    return (
-        <div className="WebGLCircle" ref={refContainer}></div>
-    );
+    return <WebGLCircleWrapper ref={refContainer} style={style} />
 }
 
 export default WebGLCircle

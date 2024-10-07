@@ -1,11 +1,11 @@
 import Logo from "../components/homepage/Logo.jsx";
 
+const homePageStyle = {
+    color: "white",
+    background: "black"
+}
 
 const HomePage = () => {
-    const homePageStyle = {
-        color: "white",
-        background: "black"
-    }
 
     return (
         <div className={'HomePage'} style={homePageStyle}>
