@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import Theme from "../theme/Theme.js";
+import Theme from "../../theme/Theme.js";
 
 
 const BGGradient = styled.div`

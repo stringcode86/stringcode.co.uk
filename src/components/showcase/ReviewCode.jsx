@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import Theme from "../theme/Theme.js";
+import Theme from "../../theme/Theme.js";
 import OneAppSixWays from "./OneAppSixWays.jsx";
 import Section from "./Section.jsx";
 
@@ -8,6 +8,12 @@ const reviewCodeStyle = {
     display: "flex",
     gap: "1em",
 }
+
+const OneAppSixWaysWrapper = styled.div`
+    @media only screen and (max-width : 767px) {
+        display: none;
+    }
+`
 
 const ReviewItemsWrapper = styled.div`
     display: flex;
@@ -28,7 +34,7 @@ const ReviewCodeItem = styled.div`
 
 const ReviewCode = ({id}) => {
     return <Section id={id} style={reviewCodeStyle}>
-        <OneAppSixWays/>
+        <OneAppSixWaysWrapper><OneAppSixWays/></OneAppSixWaysWrapper>
         <ReviewItemsWrapper>
             <ReviewCodeItem>
                 <h2>Review Code</h2>

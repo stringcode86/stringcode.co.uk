@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import Theme from "../theme/Theme.js";
+import Theme from "../../theme/Theme.js";
 import BGGradient from "./BGGradient.jsx";
 import ReactPlayer from 'react-player'
 import Section from "./Section.jsx";

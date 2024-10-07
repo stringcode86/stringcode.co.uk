@@ -1,7 +1,7 @@
-import Scene3D from "../components/Scene3D.jsx";
-import Section from "../components/Section.jsx";
+import Scene3D from "./Scene3D.jsx";
+import Section from "./Section.jsx";
 import styled from "styled-components";
-import Theme from "../theme/Theme.js";
+import Theme from "../../theme/Theme.js";
 
 const Section3DSceneWrapper = styled.div`
     overflow: visible;

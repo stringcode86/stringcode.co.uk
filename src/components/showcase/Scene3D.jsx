@@ -6,10 +6,10 @@ import {LineSegments2} from "three/addons/lines/LineSegments2.js"
 import {LineSegmentsGeometry} from "three/addons/lines/LineSegmentsGeometry.js"
 import {EffectComposer} from 'three/addons/postprocessing/EffectComposer.js'
 import {RenderPass} from 'three/addons/postprocessing/RenderPass.js'
-import {UnrealBloomPass} from '../utils/UnrealBloomPass.js'
+import {UnrealBloomPass} from '../../utils/UnrealBloomPass.js'
 import {OutputPass} from 'three/addons/postprocessing/OutputPass.js'
 import {useEffect, useRef} from "react";
-import Theme from "../theme/Theme.js";
+import Theme from "../../theme/Theme.js";
 
 
 const Scene3D = (props) => {
@@ -93,7 +93,9 @@ const Scene3D = (props) => {
         }
 
         function animate() {
-            if (props.animRotateY !== 0) {
+            if (props.scrollRotate) {
+                scene.rotation.y = window.scrollY / window.innerHeight
+            } else if (props.animRotateY !== 0) {
                 scene.rotation.y += -props.animRotateY
             } else if (x === undefined ) {
                 scene.rotation.y = window.scrollY / window.innerHeight + 1.0
@@ -130,6 +132,7 @@ Scene3D.defaultProps = {
     rotation: {x: 0, y: 0, z:0 },
     animRotateY: 0.0,
     edgesThreshold: 45,
+    scrollRotate: false,
 };
 
 export default Scene3D

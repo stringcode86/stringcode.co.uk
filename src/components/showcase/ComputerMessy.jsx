@@ -6,16 +6,15 @@ import {LineSegments2} from "three/addons/lines/LineSegments2.js"
 import {LineSegmentsGeometry} from "three/addons/lines/LineSegmentsGeometry.js"
 import {EffectComposer} from 'three/addons/postprocessing/EffectComposer.js'
 import {RenderPass} from 'three/addons/postprocessing/RenderPass.js'
-import {UnrealBloomPass} from '../utils/UnrealBloomPass.js'
+import {UnrealBloomPass} from '../../utils/UnrealBloomPass.js'
 import {OutputPass} from 'three/addons/postprocessing/OutputPass.js'
 // import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js'
 // import Stats from "three/addons/libs/stats.module"
 import {useEffect, useRef} from "react";
-import modelUrl from '../assets/models/old_pc_low_poly_game_model.glb'
-import Theme from "../theme/Theme.js";
+import modelUrl from '../../assets/models/old_pc_low_poly_game_model.glb'
+import Theme from "../../theme/Theme.js";
 
-
-const Computer = () => {
+function ComputerMessy() {
 
     const edgeColor = Theme.colors.primary
     const meshColor = Theme.colors.backgroundMesh
@@ -25,26 +24,25 @@ const Computer = () => {
 
     useEffect(() => {
         const scene = new THREE.Scene()
-        let w = 100
-        let h = 100
+        let w, h = 10
         const camera = new THREE.PerspectiveCamera(75, w / h, 0.1, 1000)
         const renderer = new THREE.WebGLRenderer(
             {antialias: true, alpha: true, powerPreference: "high-performance"}
         )
+        renderer.setClearColor(bgColor, bgAlpha)
+        renderer.setSize(w, h)
+        renderer.setAnimationLoop(animate)
 
         if (refContainer.current && refContainer.current.children.length === 0) {
             refContainer.current.appendChild(renderer.domElement)
             w = refContainer.current.getBoundingClientRect().width
             h = refContainer.current.getBoundingClientRect().height
-
-            renderer.setClearColor(bgColor, bgAlpha)
             renderer.setSize(w, h)
-            renderer.setAnimationLoop(animate)
         }
 
-        // const controls = new OrbitControls(camera, renderer.domElement)
-        camera.position.set(62, 34, 86)
-        camera.rotation.set(-0.38, 0.59, 0.21)
+        const controls = new OrbitControls(camera, renderer.domElement)
+        camera.position.set(72, 40, 100)
+        camera.rotation.set(-0.38, 0.58, 0.21)
 
         const edgeMaterial = new LineMaterial({color: edgeColor, linewidth: 5})
         const meshMaterial = new THREE.MeshBasicMaterial({
@@ -57,6 +55,7 @@ const Computer = () => {
         const path = modelUrl
         loader.load(path, function (object) {
             const meshes = []
+
             object.scene.traverse(function (child) {
                 if (child.isMesh) {
                     meshes.push(child)
@@ -97,14 +96,6 @@ const Computer = () => {
             camera.updateProjectionMatrix()
             renderer.setSize(w, h)
             renderer.domElement.width = w
-            renderer.domElement.height = h
-            // if (w < 686 && w >= 400) {
-            //     let s = w / 686
-            //     scene.scale.set(s, s, s)
-            // }
-            scene.position.set(0, -10)
-            // let s = 1.2
-            // scene.scale.set(s, s, s)
             render()
         }
 
@@ -112,7 +103,7 @@ const Computer = () => {
             const y = window.scrollY
             const h = refContainer.current.getBoundingClientRect().height
             const ratio = y / h
-            if (ratio <= 3) {
+            if (ratio <= 1) {
                 scene.rotation.y = ratio
             }
         }
@@ -121,11 +112,17 @@ const Computer = () => {
         window.addEventListener('scroll', onWindowScroll, false)
 
         function animate() {
+            // requestAnimationFrame(animate)
+            // controls.update()
             render()
+            // stats.update()
+            // TODO: Only update when camera changed
             // console.log(camera.position, camera.rotation)
         }
+
         function render() {
-            composer.render()
+            composer.render();
+            // renderer.render(scene, camera)
         }
         onWindowResize()
         animate()
@@ -133,11 +130,11 @@ const Computer = () => {
 
     return (
         <div
-            className="Computer"
+            className="ComputerMessy"
             ref={refContainer}
             style={{ minWidth: '100px', minHeight: '100px'}}
         ></div>
     )
 }
 
-export default Computer
+export default ComputerMessy

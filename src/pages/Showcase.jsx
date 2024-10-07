@@ -1,16 +1,15 @@
 import './Showcase.css'
 import {useRef} from 'react';
-import BackgroundGradient from "../components/BGGradient.jsx";
-import ShowcaseHero from "../components/ShowcaseHero.jsx";
-import ReviewCode from "../components/ReviewCode.jsx";
-import {UIUXShowcase, UIUXShowcaseMultiItem} from "../components/UIUXShowcase.jsx";
-import Section3DScene from "../components/Section3DScene.jsx";
+import BackgroundGradient from "../components/showcase/BGGradient.jsx";
+import ShowcaseHero from "../components/showcase/ShowcaseHero.jsx";
+import ReviewCode from "../components/showcase/ReviewCode.jsx";
+import {UIUXShowcase, UIUXShowcaseMultiItem} from "../components/showcase/UIUXShowcase.jsx";
+import Section3DScene from "../components/showcase/Section3DScene.jsx";
 
 import videoUrl00 from '../assets/videos/00 photo box.mov'
 import videoUrl01 from '../assets/videos/01 ClearScore.mp4'
 import videoUrl02 from '../assets/videos/memory game.mp4'
 import videoUrl03 from '../assets/videos/paralax.mp4'
-import videoUrl04 from '../assets/videos/04.mp4'
 
 import cryptoModelUrl from '../assets/models/eth2.glb'
 import moreModelUrl from '../assets/models/floppy_disk.glb'
