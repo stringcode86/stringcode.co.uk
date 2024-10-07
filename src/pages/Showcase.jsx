@@ -176,7 +176,7 @@ const Showcase = () => {
                 {
                     `
                         I have contributed to number of crypto open source projects. Monero GUI, Farcaster 
-                        python client and others. I am both cypherpunk and degen at heart. 
+                        python client, MetaMask and others. I am both cypherpunk and degen at heart. 
                     `
                     // Ethers, Geth, MetaMask, Rainbow wallet, Uniswap and more.
                 }

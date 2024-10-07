@@ -33,44 +33,59 @@ const ReviewCode = ({id}) => {
             <ReviewCodeItem>
                 <h2>Review Code</h2>
                 <div className="ReviewCode">
-                    Now whenever you want to use that button you just import it like a regular react component. styled-components allow you to pass props for customisations so if you for example want to change the font-size of the button based on a prop you can do it like so.
-                    Check it out on <a href="#">github</a>.
+                    During the interview process there is often a task. Coin Watch is simple app that
+                    is a good example of such task. Written in six different ways. App allows user to
+                    view coins and various details about them. It allows user to bookmark coins. Uses
+                    coin gecko API. Review the code
+                    on <a href="https://github.com/stringcode86/coinwatch" target="_blank">GitHub</a>.
                 </div>
             </ReviewCodeItem>
             <ReviewCodeItem>
                 <h2>Web front end</h2>
                 <div className="ReviewCode">
-                    Let's start by defining what styled-system is before we use it. From their Docs styled system is a collection of utility functions that add style props to your React components and allows you to control styles based on a global theme object with typographic scales, colors, and layout properties. Styled system is used with a CSS-in-JS library like styled-components.
+                    React.js, Redux front end app version of Coin Watch,
+                    review <a href="https://github.com/stringcode86/coinwatch" target="_blank">here</a>.
                 </div>
             </ReviewCodeItem>
             <ReviewCodeItem>
                 <h2>Mobile React Native (iOS & Android)</h2>
                 <div className="ReviewCode">
-                    Let's start by defining what styled-system is before we use it. From their Docs styled system is a collection of utility functions that add style props to your React components and allows you to control styles based on a global theme object with typographic scales, colors, and layout properties. Styled system is used with a CSS-in-JS library like styled-components.
+                    React Native app version of Coin Watch for iOS and Android.
+                    review <a href="https://github.com/stringcode86/coinwatch" target="_blank">here</a>.
                 </div>
             </ReviewCodeItem>
             <ReviewCodeItem>
                 <h2>iOS UIKit (with KMM)</h2>
                 <div className="ReviewCode">
-                    What if you want to pass a prop like size to your buttons which may be either small, medium and large? Well styled styled system allows us to do that through the variant function. Below is our final code that have all those things put together. Note that this is just a basic button, you can go even way more than this depending on your needs.
+                    Kotlin multi-platform version of the app. Share core library that contains all the
+                    business logic written in Kotlin. Compiles native binary for each platform. Vends
+                    view models to thin UI Layer written in Swift leveraging UIKit. UI layer sends events
+                    to Core library. Apps uses Viper architecture. Review
+                    code <a href="https://github.com/stringcode86/coinwatch" target="_blank">here</a>.
                 </div>
             </ReviewCodeItem>
             <ReviewCodeItem>
                 <h2>iOS Swift UI</h2>
                 <div className="ReviewCode">
-                    What if you want to pass a prop like size to your buttons which may be either small, medium and large? Well styled styled system allows us to do that through the variant function.
+                    Pure SwiftUI version of the app. Uses all the SwiftUI latest best practices. Review
+                    code <a href="https://github.com/stringcode86/coinwatch" target="_blank">here</a>.
                 </div>
             </ReviewCodeItem>
             <ReviewCodeItem>
                 <h2>Android View based (with KMM)</h2>
                 <div className="ReviewCode">
-                    What if you want to pass a prop like size to your buttons which may be either small, medium and large? Well styled styled system allows us to do that through the variant function. Below is our final code that have all those things put together. Note that this is just a basic button, you can go even way more than this depending on your needs.
+                    Kotlin multi-platform version of the app. Share core library that contains all the
+                    business logic written in Kotlin. Compiles native binary for each platform. Vends
+                    view models to thin UI Views layer, leveraging Fragment. UI layer sends events to
+                    Core library. Apps uses Viper architecture. Review
+                    code <a href="https://github.com/stringcode86/coinwatch" target="_blank">here</a>.
                 </div>
             </ReviewCodeItem>
             <ReviewCodeItem>
                 <h2>Android Jetpack Compose</h2>
                 <div className="ReviewCode">
-                    What if you want to pass a prop like size to your buttons which may be either small, medium and large?
+                    Pure Jetpack Compose version of the app. Uses all the Jetpack Compose latest best practices.
+                    Review code <a href="https://github.com/stringcode86/coinwatch" target="_blank">here</a>.
                 </div>
             </ReviewCodeItem>
         </ReviewItemsWrapper>
