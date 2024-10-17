@@ -17,7 +17,7 @@ class ErrorBoundary extends React.Component {
 
     render() {
         if (this.state.hasError) {
-            return <h1>
+            return <h1 style={{fontSize: '4em' padding: '2em 2em', textAlign: 'center' }}>
                 Ngl it ain't looking good chief. Maybe try enabling webgl, or
                 disabling aggressive privacy protections. You anon cypher punk you.
             </h1>
