@@ -2,7 +2,6 @@ import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } 
 import MainLayout from './layouts/MainLayout'
 import HomePage from './pages/HomePage'
 import Showcase from './pages/Showcase'
-import ErrorBoundary from "./components/ErrorBoundary.jsx";
 
 
 const App = () => {
@@ -16,9 +15,7 @@ const App = () => {
         )
     );
     return (
-        <ErrorBoundary>
-            <RouterProvider router={router}/>
-        </ErrorBoundary>
+        <RouterProvider router={router}/>
     )
 };
 export default App;
