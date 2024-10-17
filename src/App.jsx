@@ -13,9 +13,10 @@ const App = () => {
                 <Route path='*' element={<HomePage/>}/>
             </Route>
         )
-    );
+    )
     return (
         <RouterProvider router={router}/>
     )
-};
-export default App;
+}
+
+export default App

@@ -1,5 +1,6 @@
 import Logo from "../components/homepage/Logo.jsx";
 import styled from "styled-components";
+import ErrorBoundary from "../components/ErrorBoundary.jsx";
 
 const HomePageWrapper = styled.div`
     color: white;
@@ -27,9 +28,11 @@ const logoStyle = {
 
 const HomePage = () => {
     return (
-        <HomePageWrapper>
-            <Logo style={logoStyle}/>
-        </HomePageWrapper>
+        <ErrorBoundary>
+            <HomePageWrapper>
+                <Logo style={logoStyle}/>
+            </HomePageWrapper>
+        </ErrorBoundary>
     )
 }
 export default HomePage
