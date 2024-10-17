@@ -1,12 +1,9 @@
-import {
-    Route,
-    createBrowserRouter,
-    createRoutesFromElements,
-    RouterProvider,
-} from 'react-router-dom'
+import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom'
 import MainLayout from './layouts/MainLayout'
 import HomePage from './pages/HomePage'
 import Showcase from './pages/Showcase'
+import ErrorBoundary from "./components/ErrorBoundary.jsx";
+
 
 const App = () => {
     const router = createBrowserRouter(
@@ -18,7 +15,10 @@ const App = () => {
             </Route>
         )
     );
-
-    return <RouterProvider router={router}/>
+    return (
+        <ErrorBoundary>
+            <RouterProvider router={router}/>
+        </ErrorBoundary>
+    )
 };
 export default App;

@@ -47,6 +47,7 @@ const Section3DScene  = ({id, title, scene3DProps, children}) => {
                     rotation={scene3DProps.rotation}
                     animRotateY={scene3DProps.animRotateY}
                     edgesThreshold={scene3DProps.edgesThreshold}
+                    scrollRotate={scene3DProps.scrollRotate}
                 />
             </Scene3DWrapper>
             <div>

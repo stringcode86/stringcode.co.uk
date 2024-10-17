@@ -8,7 +8,6 @@ const WebGLCircleWrapper = styled.div`
     > canvas {
         width:100%;
         height: 100%;
-        background-color: #000;
     } 
 `
 
@@ -74,9 +73,7 @@ const WebGLCircle = ({style}) => {
         const resize = () => {
             w = refContainer.current.getBoundingClientRect().width
             h = refContainer.current.getBoundingClientRect().height
-
             const dpr = Math.min(window.devicePixelRatio, 2)
-
             renderer.setSize(w, h)
             renderer.setPixelRatio(dpr)
 

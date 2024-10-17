@@ -105,7 +105,6 @@ const Scene3DWrapper = styled.div`
     @media only screen and (max-width : 900px) {
         max-height: 50vh !important;
         > * {
-            position: absolute;
             min-width: auto;
             width: 100%;
             margin-top: 4em;
@@ -115,19 +114,17 @@ const Scene3DWrapper = styled.div`
 
     @media only screen and (max-width : 500px) {
         height: auto !important;
+        //max-height: 28vh !important;
         > * {
             margin-top: 2em;
+            width: auto;
+            height: 100%;
         }
     }
     
-    @media only screen and (max-width : 380px) {
-        max-height: 28vh !important;
-        > * {
-            width: auto;
-            height: 115%;
-            margin-top: 2em;
-        }
-    }
+    //@media only screen and (max-width : 380px) {
+    //    max-height: 28vh !important;
+    //}
 `
 
 const FooterWrapper = styled.div`
@@ -143,7 +140,7 @@ const FooterWrapper = styled.div`
         font-weight: 900 !important;
         font-size: 20cqw !important;
         line-height: 18cqw !important;
-        letter-spacing: 0.13em !important;
+        letter-spacing: 2.3cqw !important;
     }
     
     > h1 >:first-child {
@@ -151,19 +148,20 @@ const FooterWrapper = styled.div`
         margin-left: 2.5cqw !important;
     }
 
+    @media only screen and (max-width:720px) {
+        > h1 {
+            font-size: 19.2cqw !important;
+        }
+    }
+    
     @media only screen and (min-width : 1281px) {
         > h1 {
             font-size: 256px !important;
             line-height: 230.4px !important;
-            letter-spacing: 2.1cqw !important;
+            letter-spacing: 2.7cqw !important;
         }
     }
-    
-    @media only screen and (max-width:720px) {
-        > h1 {
-            font-size: 19cqw !important;
-        }
-    }
+
 `
 
 const ShowcaseHero = ({

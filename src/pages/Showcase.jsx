@@ -6,13 +6,14 @@ import ReviewCode from "../components/showcase/ReviewCode.jsx";
 import {UIUXShowcase, UIUXShowcaseMultiItem} from "../components/showcase/UIUXShowcase.jsx";
 import Section3DScene from "../components/showcase/Section3DScene.jsx";
 
-import videoUrl00 from '../assets/videos/00 photo box.mov'
-import videoUrl01 from '../assets/videos/01 ClearScore.mp4'
+import videoUrl00 from '../assets/videos/photo_box.mov'
+import videoUrl01 from '../assets/videos/flower_sm.mov'
 import videoUrl02 from '../assets/videos/memory game.mp4'
 import videoUrl03 from '../assets/videos/paralax.mp4'
 
 import cryptoModelUrl from '../assets/models/eth2.glb'
 import moreModelUrl from '../assets/models/floppy_disk.glb'
+import OverlayLines from "../components/showcase/OverlayLines.jsx";
 
 
 const ShowcaseWrapper = styled.div`
@@ -177,8 +178,9 @@ const Showcase = () => {
                 url: cryptoModelUrl,
                 position: {x: -1.68, y: 136, z: 651},
                 rotation: {x: -0.19, y: 0, z: 0},
-                animRotateY: 0, //0.01,
+                animRotateY: -1.75, //0.01,
                 edgesThreshold: 10,
+                scrollRotate: true
             }}
             modelUrl={cryptoModelUrl}
         >
@@ -223,8 +225,9 @@ const Showcase = () => {
                 url: moreModelUrl,
                 position: {x: -0.03, y: 0.24, z: 2.43},
                 rotation: {x: -0.1, y: -0.01, z: -0.0},
-                animRotateY: 0, //0.005,
+                animRotateY: 1.5, //0.005,
                 edgesThreshold: 20,
+                scrollRotate: true
             }}
         >
             <p>
@@ -266,6 +269,7 @@ const Showcase = () => {
                 }
             </p>
         </Section3DScene>
+        {/*<OverlayLines/>*/}
     </ShowcaseWrapper>
 }
 

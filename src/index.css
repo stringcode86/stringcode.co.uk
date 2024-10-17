@@ -16,9 +16,18 @@ body {
 }
 
 @keyframes blinker {
-    45% { opacity: 1;}
-    50% { opacity: 0;}
-    55% { opacity: 1;}
+    45% { opacity: 1; }
+    50% { opacity: 0; }
+    55% { opacity: 1; }
+}
+
+@keyframes flicker {
+    00% { opacity: 0.05; }
+    50% { opacity: 0.025; }
+    100% { opacity: 0.05; }
+    /*00% { opacity: 0.1; }*/
+    /*50% { opacity: 0.05; }*/
+    /*100% { opacity: 0.1; }*/
 }
 
 a:hover {
