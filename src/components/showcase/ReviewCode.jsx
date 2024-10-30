@@ -60,7 +60,8 @@ const ReviewCode = ({id}) => {
             <ReviewCodeItem onClick={() => window.open(GITHUB_URL, '_blank')}>
                 <h2>Mobile React Native (iOS & Android)</h2>
                 <div className="ReviewCode">
-                    React Native app version of Coin Watch for iOS and Android.
+                    React Native Expo iOS and Android apps. And React Next.js front end app. Uses
+                    Tamagui UIKit, Tanstack Query, Zustand.
                     review <a href="https://github.com/stringcode86/coinwatch" target="_blank">here</a>.
                 </div>
             </ReviewCodeItem>
