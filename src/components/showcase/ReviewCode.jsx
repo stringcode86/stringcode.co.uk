@@ -58,10 +58,10 @@ const ReviewCode = ({id}) => {
                 </div>
             </ReviewCodeItem>
             <ReviewCodeItem onClick={() => window.open(GITHUB_URL, '_blank')}>
-                <h2>Mobile React Native (iOS & Android)</h2>
+                <h2>Mobile React Native (iOS, Android & Web)</h2>
                 <div className="ReviewCode">
-                    React Native Expo iOS and Android apps. And React Next.js front end app. Uses
-                    Tamagui UIKit, Tanstack Query, Zustand.
+                    React Native Expo iOS and Android apps. And React Next.js front end app. Virtually all code is
+                    shared amongst all three platforms. Uses Tamagui UIKit, Tanstack Query, Zustand.
                     review <a href="https://github.com/stringcode86/coinwatch" target="_blank">here</a>.
                 </div>
             </ReviewCodeItem>
