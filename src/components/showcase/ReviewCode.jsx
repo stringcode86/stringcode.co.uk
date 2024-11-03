@@ -53,8 +53,8 @@ const ReviewCode = ({id}) => {
             <ReviewCodeItem onClick={() => window.open(GITHUB_URL, '_blank')}>
                 <h2>Web front end</h2>
                 <div className="ReviewCode">
-                    React.js, Redux front end app version of Coin Watch,
-                    review <a href="https://github.com/stringcode86/coinwatch" target="_blank">here</a>.
+                    Next.js React version of CoinWatch app. Uses Tailwind, Tanstack Query, Zustand, React-rechart.
+                    Review code <a href="https://github.com/stringcode86/coinwatch" target="_blank">here</a>.
                 </div>
             </ReviewCodeItem>
             <ReviewCodeItem onClick={() => window.open(GITHUB_URL, '_blank')}>
