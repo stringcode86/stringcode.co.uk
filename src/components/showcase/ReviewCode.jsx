@@ -71,7 +71,8 @@ const ReviewCode = ({id}) => {
                     Kotlin multi-platform version of the app. Share core library that contains all the
                     business logic written in Kotlin. Compiles native binary for each platform. Vends
                     view models to thin UI Layer written in Swift leveraging UIKit. UI layer sends events
-                    to Core library. Apps uses Viper architecture. Review
+                    to Core library. Apps uses Viper architecture. Code so clean it brings tears of joy to
+                    Uncle Bob's eye. Review
                     code <a href="https://github.com/stringcode86/coinwatch" target="_blank">here</a>.
                 </div>
             </ReviewCodeItem>
@@ -88,7 +89,8 @@ const ReviewCode = ({id}) => {
                     Kotlin multi-platform version of the app. Share core library that contains all the
                     business logic written in Kotlin. Compiles native binary for each platform. Vends
                     view models to thin UI Views layer, leveraging Fragment. UI layer sends events to
-                    Core library. Apps uses Viper architecture. Review
+                    Core library. Apps uses Viper architecture. Code so clean it brings tears of joy to
+                    Uncle Bob's eye. Review
                     code <a href="https://github.com/stringcode86/coinwatch" target="_blank">here</a>.
                 </div>
             </ReviewCodeItem>
